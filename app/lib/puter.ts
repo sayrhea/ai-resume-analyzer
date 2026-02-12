@@ -351,6 +351,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
                 },
             ],
             { model: "anthropic/claude-opus-4-6" }
+            // { model: "openrouter:anthropic/claude-3.5-sonnet" }
         ) as Promise<AIResponse | undefined>;
     };
 
