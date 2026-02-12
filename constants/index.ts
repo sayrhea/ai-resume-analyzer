@@ -228,7 +228,6 @@ export const AIResponseFormat = `
 export const prepareInstructions = ({
                                         jobTitle,
                                         jobDescription,
-                                        AIResponseFormat,
                                     }: {
     jobTitle: string;
     jobDescription: string;
@@ -245,4 +244,6 @@ export const prepareInstructions = ({
   The job description is: ${jobDescription}
   Provide the feedback using the following format: ${AIResponseFormat}
   Return the analysis as a JSON object, without any other text and without the backticks.
-  Do not include any other text or comments.`;
+  Do not include any other text or comments.
+  Ensure that it is a valid JSON. Do not wrap it around mark-down text.
+  The response will be processed using JSON.parse to load the data.`;
